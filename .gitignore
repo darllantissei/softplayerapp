@@ -1,2 +1,7 @@
 .vs/
 softplayerapp/obj/
+packages/
+softplayerapp.tests/bin/
+softplayerapp.tests/obj/
+softplayerapp/bin/
+softplayerclient/obj/

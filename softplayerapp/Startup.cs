@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using softplayerapp.IServices;
+using softplayerapp.Services;
 
 namespace softplayerapp
 {
@@ -26,6 +28,9 @@ namespace softplayerapp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // Adicionar o micro-serviço no escopo da execução para utilização de injeção de dependência
+            services.AddScoped(typeof(ICalculateService), typeof(CalculateService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

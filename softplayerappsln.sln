@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "softplayerapp", "softplayerapp\softplayerapp.csproj", "{106B0274-8368-4758-B6BE-A8B210F4ED74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "softplayerapp", "softplayerapp\softplayerapp.csproj", "{106B0274-8368-4758-B6BE-A8B210F4ED74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "softplayerapp.tests", "softplayerapp.tests\softplayerapp.tests.csproj", "{F6BDE656-4820-45DA-8F9A-4F30241137FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "softplayerclient", "softplayerclient\softplayerclient.csproj", "{A8A24D03-497E-4735-A452-26C8DEF274EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{106B0274-8368-4758-B6BE-A8B210F4ED74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{106B0274-8368-4758-B6BE-A8B210F4ED74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{106B0274-8368-4758-B6BE-A8B210F4ED74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6BDE656-4820-45DA-8F9A-4F30241137FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BDE656-4820-45DA-8F9A-4F30241137FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BDE656-4820-45DA-8F9A-4F30241137FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BDE656-4820-45DA-8F9A-4F30241137FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A24D03-497E-4735-A452-26C8DEF274EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A24D03-497E-4735-A452-26C8DEF274EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A24D03-497E-4735-A452-26C8DEF274EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A24D03-497E-4735-A452-26C8DEF274EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
