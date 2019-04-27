@@ -42,6 +42,15 @@ namespace softplayerclient.Services
                 .ContinueWith(OnExceptionErroHandler)
                 .Wait();
 
+                if (httpResponseMessage == null)
+                {
+                    return new Returns
+                    {
+                        StatusCode = -1,
+                        Message = "Sem conexão com a internet ou o servidor está offline!"
+                    };
+                }
+
                 string retornoApi = string.Empty;
                 Returns returns = null;
                 switch (httpResponseMessage.StatusCode)
