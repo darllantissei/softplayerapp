@@ -41,6 +41,6 @@ namespace softplayerapp.tests
             decimal juros = 0m;
             decimal valorFinal = _calculateService.CalculateValues(valorInical, meses, juros);
             Assert.Equal(valorInical, valorFinal);
-        }
+        }        
     }
 }

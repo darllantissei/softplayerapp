@@ -21,6 +21,9 @@ namespace softplayerapp.Services
 
             valorFinal = Math.Truncate(100 * valorFinal) / 100;
 
+            if (double.IsInfinity(valorFinal))
+                return 0m;
+
             return (decimal)valorFinal;            
         }
     }
