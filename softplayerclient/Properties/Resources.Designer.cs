@@ -81,9 +81,18 @@ namespace softplayerclient.Properties {
         /// <summary>
         ///   Looks up a localized string similar to https://localhost:5001/api/calculajuros.
         /// </summary>
-        internal static string URL_API_CAL {
+        internal static string URL_API_CAL_LOCAL {
             get {
-                return ResourceManager.GetString("URL_API_CAL", resourceCulture);
+                return ResourceManager.GetString("URL_API_CAL_LOCAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://softplayerappdarllantissei.azurewebsites.net/api/calculajuros.
+        /// </summary>
+        internal static string URL_API_CAL_WEB {
+            get {
+                return ResourceManager.GetString("URL_API_CAL_WEB", resourceCulture);
             }
         }
     }

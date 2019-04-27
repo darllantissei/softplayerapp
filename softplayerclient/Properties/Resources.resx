@@ -125,8 +125,12 @@
     <value>valorinicial</value>
     <comment>Parâmetro para informar o valor inicial</comment>
   </data>
-  <data name="URL_API_CAL" xml:space="preserve">
+  <data name="URL_API_CAL_LOCAL" xml:space="preserve">
     <value>https://localhost:5001/api/calculajuros</value>
     <comment>URL para solicitação de cálculo de Juros Composto</comment>
+  </data>
+  <data name="URL_API_CAL_WEB" xml:space="preserve">
+    <value>https://softplayerappdarllantissei.azurewebsites.net/api/calculajuros</value>
+    <comment>URL para solicitação de cálculo de juros composto</comment>
   </data>
 </root>

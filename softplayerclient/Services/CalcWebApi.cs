@@ -37,7 +37,7 @@ namespace softplayerclient.Services
                 // síncrono para que possamos manipular em uma outra situação processos assíncronos
                 Task.Run(async () =>
                 {
-                   httpResponseMessage = await httpClient.GetAsync($"{Properties.Resources.URL_API_CAL}?{Properties.Resources.PAR_VALOR_INICIAL}={valorInicial}&{Properties.Resources.PAR_MESES}={meses}");
+                   httpResponseMessage = await httpClient.GetAsync($"{Properties.Resources.URL_API_CAL_WEB}?{Properties.Resources.PAR_VALOR_INICIAL}={valorInicial}&{Properties.Resources.PAR_MESES}={meses}");
                 })
                 .ContinueWith(OnExceptionErroHandler)
                 .Wait();
