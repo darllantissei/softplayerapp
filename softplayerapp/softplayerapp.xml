@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>softplayerapp</name>
+    </assembly>
+    <members>
+        <member name="T:softplayerapp.Class.Returns">
+            <summary>
+            Classe responsável por retornar os valores processados pelo servidor, irá fazer um parse para JSON
+            </summary>
+        </member>
+        <member name="P:softplayerapp.Class.Returns.StatusCode">
+            <summary>
+            Irá informar o HttpStatusCode
+            </summary>
+        </member>
+        <member name="P:softplayerapp.Class.Returns.Message">
+            <summary>
+            Retornará uma mensagem
+            </summary>
+        </member>
+        <member name="P:softplayerapp.Class.Returns.Calc">
+            <summary>
+            Classe para obter o calculo
+            </summary>
+        </member>
+        <member name="T:softplayerapp.Class.Returns.Calculation">
+            <summary>
+            Classe para obter o calculo
+            </summary>
+        </member>
+        <member name="P:softplayerapp.Class.Returns.Calculation.ValorFinal">
+            <summary>
+            Propriedade para informar o valor padrão
+            </summary>
+        </member>
+        <member name="T:softplayerapp.Controllers.CalculoController">
+            <summary>
+            Controller cálculo
+            </summary>
+        </member>
+        <member name="M:softplayerapp.Controllers.CalculoController.#ctor(softplayerapp.IServices.ICalculateService)">
+            <summary>
+            Método constructor da classe
+            </summary>
+            <param name="calculate">Micro-serviço para realização de cálculo de juros composto</param>
+        </member>
+        <member name="M:softplayerapp.Controllers.CalculoController.Get">
+            <summary>
+            Método Action inicial
+            </summary>
+            <returns>Retornará uma action para requisição</returns>
+        </member>
+        <member name="M:softplayerapp.Controllers.CalculoController.JurosComposto">
+            <summary>
+            Método Action para realização do cálculo de juros composto
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:softplayerapp.Controllers.CalculoController.RequestValidate(softplayerapp.Class.Returns@)">
+            <summary>
+            Método responsável pela validações dos parâmetros
+            </summary>
+            <param name="ret">objeto de saída Returns com statuscode e mensagens de validação</param>
+            <see cref="T:softplayerapp.Class.Returns"/>
+            <returns>Retorna true indicando que as informações estão validadas para uso, retornará false caso encontre alguma inconsistência</returns>
+        </member>
+        <member name="T:softplayerapp.Controllers.ShowMeTheCodeController">
+            <summary>
+            Controller para mostrar o endereço do github
+            </summary>
+        </member>
+        <member name="M:softplayerapp.Controllers.ShowMeTheCodeController.Get">
+            <summary>
+            Método Action para retornar a url do github
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:softplayerapp.IServices.ICalculateService">
+            <summary>
+            Interface do Micro-serviço para calcular juros
+            </summary>
+        </member>
+        <member name="M:softplayerapp.IServices.ICalculateService.CalculateValues(System.Decimal,System.Int32,System.Decimal)">
+            <summary>
+            Método para realização de cálculo de juros composto
+            </summary>
+            <param name="valorInicial">valor inicial</param>
+            <param name="meses">Quantidade de meses</param>
+            <param name="juros">Juros para aplicação do cálculo</param>
+            <returns>Retorno o valor final</returns>
+        </member>
+        <member name="T:softplayerapp.Services.CalculateService">
+            <summary>
+            Micro-serviço para calcular juros
+            </summary>
+        </member>
+        <member name="M:softplayerapp.Services.CalculateService.CalculateValues(System.Decimal,System.Int32,System.Decimal)">
+            <summary>
+            Método para realização de cálculo de juros composto
+            </summary>
+            <param name="valorInicial">valor inicial</param>
+            <param name="meses">Quantidade de meses</param>
+            <param name="juros">Juros para aplicação do cálculo</param>
+            <returns>Retorno o valor final</returns>
+        </member>
+        <member name="T:softplayerapp.Startup">
+            <summary>
+            Classe Startup do projetos
+            </summary>
+        </member>
+        <member name="M:softplayerapp.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Método constructor
+            </summary>
+            <param name="configuration">Configuração da aplicação</param>
+        </member>
+        <member name="P:softplayerapp.Startup.Configuration">
+            <summary>
+            Atributo para obter a configuração
+            </summary>
+        </member>
+        <member name="M:softplayerapp.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configuração dos serviços
+            </summary>
+            <param name="services">Serviços para realização das configurações</param>
+        </member>
+        <member name="M:softplayerapp.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Realizar as configurações de execução da aplicação
+            </summary>
+            <param name="app">Construtor do aplicativo</param>
+            <param name="env">Ambiente da aplicação</param>
+        </member>
+        <member name="T:softplayerapp.Util.Constants">
+            <summary>
+            Classe responsável por informar as constantes utilizadas no projeto
+            </summary>
+        </member>
+        <member name="F:softplayerapp.Util.Constants.PAR_VALOR_INICAL">
+            <summary>
+            Constante para utilizar o nome do parâmetro solicitado pela API
+            </summary>
+        </member>
+        <member name="F:softplayerapp.Util.Constants.PAR_MESES">
+            <summary>
+            Constante para utilizar o nome do parâmetro solicitado pela API
+            </summary>
+        </member>
+        <member name="F:softplayerapp.Util.Constants.JUROS">
+            <summary>
+            Constante para utilizar o juros padrão
+            </summary>
+        </member>
+        <member name="T:softplayerapp.Validations.Verifications">
+            <summary>
+            Classe estática para métodos de validação de atributos
+            </summary>
+        </member>
+        <member name="M:softplayerapp.Validations.Verifications.ValuesIsNull(System.Object[])">
+            <summary>
+            Método responsável por verificar se algum valores que for passado por parâmetro está nulo
+            </summary>
+            <param name="values">Valores que deverão ser verificados</param>
+            <returns>Retornará verdadeiro se encontrar valor nulo, caso contrário retorna false, indicando que os valores estão ok</returns>
+        </member>
+        <member name="M:softplayerapp.Validations.Verifications.AllowOnlyOneParameter(Microsoft.AspNetCore.Http.IQueryCollection,System.String)">
+            <summary>
+            Método estático para verificar se a requisição informou mais de 1 parametro com mesmo nome
+            </summary>
+            <param name="parameters">Query com parâmetros</param>
+            <param name="nomeParametro">Nome do parâmetro para buscar na Query do Request</param>
+            <returns>Retornará verdadeiro se existir apenas 1 parametro, caso contrário irá retornar false isso quer dizer que não é aceito vários parametros com mesmo nome</returns>
+        </member>
+    </members>
+</doc>

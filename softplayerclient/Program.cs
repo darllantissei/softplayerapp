@@ -6,10 +6,13 @@ using System.Windows.Forms;
 
 namespace softplayerclient
 {
+    /// <summary>
+    /// Classe program de inicialização da aplicação
+    /// </summary>
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Inicialização da aplicação
         /// </summary>
         [STAThread]
         static void Main()
@@ -17,6 +20,6 @@ namespace softplayerclient
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmPrincipal());
-        }
+        }        
     }
 }

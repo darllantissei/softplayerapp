@@ -32,6 +32,7 @@ namespace softplayerapp.Validations
         /// Método estático para verificar se a requisição informou mais de 1 parametro com mesmo nome
         /// </summary>
         /// <param name="parameters">Query com parâmetros</param>
+        /// <param name="nomeParametro">Nome do parâmetro para buscar na Query do Request</param>
         /// <returns>Retornará verdadeiro se existir apenas 1 parametro, caso contrário irá retornar false isso quer dizer que não é aceito vários parametros com mesmo nome</returns>
         public static bool AllowOnlyOneParameter(IQueryCollection parameters, string nomeParametro)
         {

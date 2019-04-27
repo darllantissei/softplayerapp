@@ -12,10 +12,17 @@ using static softplayerapp.Class.Returns;
 
 namespace softplayerapp.Controllers
 {
+    /// <summary>
+    /// Controller para mostrar o endereço do github
+    /// </summary>
     [Route("api/showmethecode")]
     [ApiController]
     public class ShowMeTheCodeController : ControllerBase
     {
+        /// <summary>
+        /// Método Action para retornar a url do github
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Get()
         {

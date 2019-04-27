@@ -10,8 +10,17 @@ namespace softplayerapp.Util
     /// </summary>
     public class Constants
     {
+        /// <summary>
+        /// Constante para utilizar o nome do parâmetro solicitado pela API
+        /// </summary>
         public const string PAR_VALOR_INICAL = "valorinicial";
+        /// <summary>
+        /// Constante para utilizar o nome do parâmetro solicitado pela API
+        /// </summary>
         public const string PAR_MESES = "meses";
+        /// <summary>
+        /// Constante para utilizar o juros padrão
+        /// </summary>
         public const decimal JUROS = 0.01m;
     }
 }

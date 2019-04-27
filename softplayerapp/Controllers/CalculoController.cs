@@ -13,17 +13,28 @@ using static softplayerapp.Class.Returns;
 
 namespace softplayerapp.Controllers
 {
+    /// <summary>
+    /// Controller cálculo
+    /// </summary>
     [Route("api/")]
     [ApiController]
     public class CalculoController : ControllerBase
     {
         private readonly ICalculateService _calculate;
 
+        /// <summary>
+        /// Método constructor da classe
+        /// </summary>
+        /// <param name="calculate">Micro-serviço para realização de cálculo de juros composto</param>
         public CalculoController(ICalculateService calculate)
         {
             _calculate = calculate;
         }
 
+        /// <summary>
+        /// Método Action inicial
+        /// </summary>
+        /// <returns>Retornará uma action para requisição</returns>
         [HttpGet]
         public ActionResult Get()
         {
@@ -36,6 +47,10 @@ namespace softplayerapp.Controllers
                 }));
         }
 
+        /// <summary>
+        /// Método Action para realização do cálculo de juros composto
+        /// </summary>
+        /// <returns></returns>
         [HttpGet, Route("calculajuros")]
         public ActionResult JurosComposto()
         {

@@ -14,6 +14,9 @@ namespace softplayerclient
 {
     public partial class frmPrincipal : Form
     {
+        /// <summary>
+        /// Método constructor
+        /// </summary>
         public frmPrincipal()
         {
             InitializeComponent();
